@@ -5,6 +5,18 @@
 	<groupId>com.mastering.spring</groupId>
 	<artifactId>Chapter02-Dependency-Injection</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<name>${project.artifactId}</name>
 
 	<properties>
@@ -70,7 +82,13 @@
 			<version>1.9.0-rc1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
 	</dependencies>
+
 	<repositories>
 		<repository>
 			<id>spring-snapshots</id>
